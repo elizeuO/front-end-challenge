@@ -1,12 +1,13 @@
 @use '../../general.scss'as *;
 
 .c-banner{
-    padding: 60px 0;
+    @extend %center;
+    padding: 80px 0;
     background: $colorBlue;
     background-image: radial-gradient(at top right, $colorLightBlue 11%, $colorBlue 49%);
 
     h1{
-        font-size: 40px;
+        font-size: 50px;
         color: $colorWhite;
     }
 }

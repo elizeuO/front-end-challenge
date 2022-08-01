@@ -12,20 +12,23 @@ function BlogItems() {
       });
   }, []);
 
-  // console.log(blogItems);
+ console.log(blogItems);
 
   return (
     <section className="c-section">
       <div className="c-container">
-        <div className="l-flex l-flex--center l-flex--wrap l-flex--negative">
+        <div className="l-flex l-flex--center l-flex--wrap l-flex--negative l-flex--stretch">
           {blogItems.map((blogItem) => {
             const imgSrc = blogItem._embedded["wp:featuredmedia"][0].source_url;
+            const excerpt = blogItem.excerpt.rendered.replace('<p>' ,'').replace('</p>','');
+
 
             return (
               <BlogItem
                 image={imgSrc}
                 title={blogItem.title.rendered}
                 link={blogItem.link}
+                excerpt={excerpt}
               />
             );
           })}
