@@ -1,7 +1,13 @@
-function Archive() {
-    return (<div>
+import Banner from "../components/banner/banner";
+import BlogItems from "../components/blogItems/blogItems";
 
-        </div>);
-  }
-  
-  export default Archive;
+function Archive() {
+  return (
+    <>
+    <Banner title="Blog"/>
+      <BlogItems />
+    </>
+  );
+}
+
+export default Archive;
